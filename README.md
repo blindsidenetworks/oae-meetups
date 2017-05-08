@@ -5,12 +5,10 @@
 This is an OAE backend module that provides integration with [BigBlueButton](http://bigbluebutton.org/)
 and allows group meetups (through web conferencing) in OAE.
 
-See https://github.com/oaeproject/Hilary if you'd like to use it.
-
 
 ## Before installing oae-meetups:
 Ensure that you are using the modified [3akai-ux](https://github.com/blindsidenetworks/3akai-ux)
-repo that has the oae-meetups ui.
+repo that includes the meetups ui.
 
 The modified 3akai-ux repo follows the same setup and installation instructions
 available [here](https://github.com/oaeproject/Hilary).
@@ -56,11 +54,14 @@ The next few options are for configurating meetups based on group manager needs:
 
 **Recording capability enabled by default in new meetings** - specifies whether or not recording is enabled by default in meetups
 
-**Enable all moderator capability** - specifies whether or not all moderator features are available
+**Enable all moderator capability** - specifies whether or not all users in the meetup are moderators
 
 **All moderator capability enabled by default in new meetings** - specifies whether or not all moderator capability is enabled by default
 
-**Default visibility for a new meeting** - specifies which tenant group can access the meetup
+**Default visibility for a new meeting** - specifies which tenant members group can access the meetup
+* Public - all users can access the meetup
+* Authenticated Users - all logged in users can access the meetup
+* Private - only group members can access the meetup
 
 **Note:** don't forget to save the configuration!
 
@@ -72,3 +73,19 @@ regular group members can join the meetup in the same manner.
 
 Moderators of the meetup are users in the group who have _MANAGER_ access and regular users
 are those listed as having _MEMBER_ access in the 'Members' tab of the group.
+
+Note: This is overidden if **Enable all moderator capability** is enabled
+
+All members of the group are notified when a group member has started/joined the group meetup.
+
+For help using BBB visit the [help page](https://bigbluebutton.org/videos/) or click the '?' symbol when in the client.
+
+## Help
+**Q**: 504 Gateway Time-out Error
+
+**A**: The BigBlueButton server URL and/or secret is invalid and a connection could not be made. Try running `bbb-conf --secret` again
+       and ensure that you have the correct values. If it still does not work, ensure that your BBB server is setup correctly.
+
+**Q**: I can't see the meetups button in the left menu and I am sure I enabled and installed Meetups properly!
+
+**A**: The browser most likely still has a cached copy of the page. Try clearing the cache and reloading the page.
