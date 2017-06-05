@@ -2,7 +2,6 @@
   "name": "oae-meetups",
   "version": "0.0.0",
   "description": "An OAE backend module for integrating BigBlueButton",
-  "author": "Jesus Federico",
   "license": "ECL-2.0",
   "dependencies": {
     "sha1": ">= 1.1.1",

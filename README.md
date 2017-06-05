@@ -48,7 +48,7 @@ These values can be found by running `bbb-conf --secret` in the bbb server conso
 Copy the resulting URL value to the URL field and Secret value to the Secret field.
 
 ### Configurations
-The next few options are for configurating meetups based on group manager needs:
+The next few options are for configuring meetups based on group manager needs:
 
 **Enable recording capability** - specifies whether or not the recording feature in meetups is available
 
@@ -74,7 +74,7 @@ regular group members can join the meetup in the same manner.
 Moderators of the meetup are users in the group who have _MANAGER_ access and regular users
 are those listed as having _MEMBER_ access in the 'Members' tab of the group.
 
-Note: This is overidden if **Enable all moderator capability** is enabled
+Note: This is overridden if **Enable all moderator capability** is enabled
 
 All members of the group are notified when a group member has started/joined the group meetup.
 
